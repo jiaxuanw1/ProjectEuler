@@ -2,7 +2,8 @@
 public class Euler_008 {
 
 	public static void main(String[] args) {
-		String n = "73167176531330624919225119674426574742355349194934"
+		int DIGITS = 13;
+		String NUM = "73167176531330624919225119674426574742355349194934"
 				+ "96983520312774506326239578318016984801869478851843"
 				+ "85861560789112949495459501737958331952853208805511"
 				+ "12540698747158523863050715693290963295227443043557"
@@ -25,12 +26,12 @@ public class Euler_008 {
 
 		long product = 0L;
 
-		for (int i = 0; i < n.length() - 13; i++) {
+		for (int i = 0; i < NUM.length() - DIGITS + 1; i++) {
 			long testProduct = 1;
-			String[] test = n.substring(i, i + 13).split("");
+			String[] test = NUM.substring(i, i + DIGITS).split("");
 
-			for (String digit : test) {
-				testProduct *= Integer.parseInt(digit);
+			for (String d : test) {
+				testProduct *= Integer.parseInt(d);
 			}
 			if (testProduct > product) {
 				product = testProduct;
