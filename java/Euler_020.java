@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class Euler_020 {
 
 	public static BigInteger factorial(int n) {
-		BigInteger product = new BigInteger("1");
+		BigInteger product = BigInteger.ONE;
 		for (int i = n; i > 1; i--) {
 			product = product.multiply(BigInteger.valueOf(i));
 		}

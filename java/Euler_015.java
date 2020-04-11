@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class Euler_015 {
 
 	public static BigInteger factorial(int n) {
-		BigInteger product = new BigInteger("1");
+		BigInteger product = BigInteger.ONE;
 		for (int i = n; i > 1; i--) {
 			product = product.multiply(BigInteger.valueOf(i));
 		}
@@ -11,7 +11,7 @@ public class Euler_015 {
 	}
 
 	public static BigInteger choose(int n, int k) {
-		BigInteger perm = new BigInteger("1");
+		BigInteger perm = BigInteger.ONE;
 		for (int i = n; i > n - k; i--) {
 			perm = perm.multiply(BigInteger.valueOf(i));
 		}

@@ -3,9 +3,9 @@ import java.math.BigInteger;
 public class Euler_025 {
 
 	public static void main(String[] args) {
-		BigInteger n1 = new BigInteger("1");
-		BigInteger n2 = new BigInteger("1");
-		BigInteger sum = new BigInteger("0");
+		BigInteger n1 = BigInteger.ONE;
+		BigInteger n2 = BigInteger.ONE;
+		BigInteger sum = BigInteger.ZERO;
 		int count = 2;
 
 		while (sum.toString().length() < 1000) {
